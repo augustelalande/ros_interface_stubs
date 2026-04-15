@@ -13,3 +13,6 @@
 [submodule "interfaces/navigation_msgs"]
 	path = interfaces/navigation_msgs
 	url = https://github.com/ros-planning/navigation_msgs
+[submodule "interfaces/geometry2"]
+	path = interfaces/geometry2
+	url = https://github.com/ros2/geometry2
