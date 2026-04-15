@@ -1,0 +1,19 @@
+[project]
+name = "ros-interface-stubs"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "jinja2>=3.1.6",
+    "pyright>=1.1.408",
+    "ruff>=0.15.10",
+]
+
+[tool.pyright]
+extraPaths = [
+    "stubs/common_interfaces",
+    "stubs/rcl_interfaces",
+    "stubs/unique_identifier_msgs",
+]
+ignore = ["interfaces"]

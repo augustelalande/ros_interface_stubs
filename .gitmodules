@@ -1,0 +1,9 @@
+[submodule "interfaces/common_interfaces"]
+	path = interfaces/common_interfaces
+	url = https://github.com/ros2/common_interfaces
+[submodule "interfaces/rcl_interfaces"]
+	path = interfaces/rcl_interfaces
+	url = https://github.com/ros2/rcl_interfaces
+[submodule "interfaces/unique_identifier_msgs"]
+	path = interfaces/unique_identifier_msgs
+	url = https://github.com/ros2/unique_identifier_msgs

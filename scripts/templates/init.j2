@@ -1,0 +1,14 @@
+# This file was generated automatically by
+# `scripts/generate_stubs.py`.
+# Do not modify it manually. If needed re-run the script.
+
+{% for file, cls in zip(files, clss) %}
+from .{{ file }} import {{ cls }}
+{% endfor %}
+
+
+__all__ = [
+{% for cls in clss %}
+    '{{ cls }}',
+{% endfor %}
+]

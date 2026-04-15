@@ -1,0 +1,124 @@
+# This file was generated automatically by
+# `scripts/generate_stubs.py`.
+# Do not modify it manually. If needed re-run the script.
+
+class FieldType:
+    # Constants
+    FIELD_TYPE_NOT_SET: int = 0
+    FIELD_TYPE_NESTED_TYPE: int = 1
+    FIELD_TYPE_INT8: int = 2
+    FIELD_TYPE_UINT8: int = 3
+    FIELD_TYPE_INT16: int = 4
+    FIELD_TYPE_UINT16: int = 5
+    FIELD_TYPE_INT32: int = 6
+    FIELD_TYPE_UINT32: int = 7
+    FIELD_TYPE_INT64: int = 8
+    FIELD_TYPE_UINT64: int = 9
+    FIELD_TYPE_FLOAT: int = 10
+    FIELD_TYPE_DOUBLE: int = 11
+    FIELD_TYPE_LONG_DOUBLE: int = 12
+    FIELD_TYPE_CHAR: int = 13
+    FIELD_TYPE_WCHAR: int = 14
+    FIELD_TYPE_BOOLEAN: int = 15
+    FIELD_TYPE_BYTE: int = 16
+    FIELD_TYPE_STRING: int = 17
+    FIELD_TYPE_WSTRING: int = 18
+    FIELD_TYPE_FIXED_STRING: int = 19
+    FIELD_TYPE_FIXED_WSTRING: int = 20
+    FIELD_TYPE_BOUNDED_STRING: int = 21
+    FIELD_TYPE_BOUNDED_WSTRING: int = 22
+    FIELD_TYPE_NESTED_TYPE_ARRAY: int = 49
+    FIELD_TYPE_INT8_ARRAY: int = 50
+    FIELD_TYPE_UINT8_ARRAY: int = 51
+    FIELD_TYPE_INT16_ARRAY: int = 52
+    FIELD_TYPE_UINT16_ARRAY: int = 53
+    FIELD_TYPE_INT32_ARRAY: int = 54
+    FIELD_TYPE_UINT32_ARRAY: int = 55
+    FIELD_TYPE_INT64_ARRAY: int = 56
+    FIELD_TYPE_UINT64_ARRAY: int = 57
+    FIELD_TYPE_FLOAT_ARRAY: int = 58
+    FIELD_TYPE_DOUBLE_ARRAY: int = 59
+    FIELD_TYPE_LONG_DOUBLE_ARRAY: int = 60
+    FIELD_TYPE_CHAR_ARRAY: int = 61
+    FIELD_TYPE_WCHAR_ARRAY: int = 62
+    FIELD_TYPE_BOOLEAN_ARRAY: int = 63
+    FIELD_TYPE_BYTE_ARRAY: int = 64
+    FIELD_TYPE_STRING_ARRAY: int = 65
+    FIELD_TYPE_WSTRING_ARRAY: int = 66
+    FIELD_TYPE_FIXED_STRING_ARRAY: int = 67
+    FIELD_TYPE_FIXED_WSTRING_ARRAY: int = 68
+    FIELD_TYPE_BOUNDED_STRING_ARRAY: int = 69
+    FIELD_TYPE_BOUNDED_WSTRING_ARRAY: int = 70
+    FIELD_TYPE_NESTED_TYPE_BOUNDED_SEQUENCE: int = 97
+    FIELD_TYPE_INT8_BOUNDED_SEQUENCE: int = 98
+    FIELD_TYPE_UINT8_BOUNDED_SEQUENCE: int = 99
+    FIELD_TYPE_INT16_BOUNDED_SEQUENCE: int = 100
+    FIELD_TYPE_UINT16_BOUNDED_SEQUENCE: int = 101
+    FIELD_TYPE_INT32_BOUNDED_SEQUENCE: int = 102
+    FIELD_TYPE_UINT32_BOUNDED_SEQUENCE: int = 103
+    FIELD_TYPE_INT64_BOUNDED_SEQUENCE: int = 104
+    FIELD_TYPE_UINT64_BOUNDED_SEQUENCE: int = 105
+    FIELD_TYPE_FLOAT_BOUNDED_SEQUENCE: int = 106
+    FIELD_TYPE_DOUBLE_BOUNDED_SEQUENCE: int = 107
+    FIELD_TYPE_LONG_DOUBLE_BOUNDED_SEQUENCE: int = 108
+    FIELD_TYPE_CHAR_BOUNDED_SEQUENCE: int = 109
+    FIELD_TYPE_WCHAR_BOUNDED_SEQUENCE: int = 110
+    FIELD_TYPE_BOOLEAN_BOUNDED_SEQUENCE: int = 111
+    FIELD_TYPE_BYTE_BOUNDED_SEQUENCE: int = 112
+    FIELD_TYPE_STRING_BOUNDED_SEQUENCE: int = 113
+    FIELD_TYPE_WSTRING_BOUNDED_SEQUENCE: int = 114
+    FIELD_TYPE_FIXED_STRING_BOUNDED_SEQUENCE: int = 115
+    FIELD_TYPE_FIXED_WSTRING_BOUNDED_SEQUENCE: int = 116
+    FIELD_TYPE_BOUNDED_STRING_BOUNDED_SEQUENCE: int = 117
+    FIELD_TYPE_BOUNDED_WSTRING_BOUNDED_SEQUENCE: int = 118
+    FIELD_TYPE_NESTED_TYPE_UNBOUNDED_SEQUENCE: int = 145
+    FIELD_TYPE_INT8_UNBOUNDED_SEQUENCE: int = 146
+    FIELD_TYPE_UINT8_UNBOUNDED_SEQUENCE: int = 147
+    FIELD_TYPE_INT16_UNBOUNDED_SEQUENCE: int = 148
+    FIELD_TYPE_UINT16_UNBOUNDED_SEQUENCE: int = 149
+    FIELD_TYPE_INT32_UNBOUNDED_SEQUENCE: int = 150
+    FIELD_TYPE_UINT32_UNBOUNDED_SEQUENCE: int = 151
+    FIELD_TYPE_INT64_UNBOUNDED_SEQUENCE: int = 152
+    FIELD_TYPE_UINT64_UNBOUNDED_SEQUENCE: int = 153
+    FIELD_TYPE_FLOAT_UNBOUNDED_SEQUENCE: int = 154
+    FIELD_TYPE_DOUBLE_UNBOUNDED_SEQUENCE: int = 155
+    FIELD_TYPE_LONG_DOUBLE_UNBOUNDED_SEQUENCE: int = 156
+    FIELD_TYPE_CHAR_UNBOUNDED_SEQUENCE: int = 157
+    FIELD_TYPE_WCHAR_UNBOUNDED_SEQUENCE: int = 158
+    FIELD_TYPE_BOOLEAN_UNBOUNDED_SEQUENCE: int = 159
+    FIELD_TYPE_BYTE_UNBOUNDED_SEQUENCE: int = 160
+    FIELD_TYPE_STRING_UNBOUNDED_SEQUENCE: int = 161
+    FIELD_TYPE_WSTRING_UNBOUNDED_SEQUENCE: int = 162
+    FIELD_TYPE_FIXED_STRING_UNBOUNDED_SEQUENCE: int = 163
+    FIELD_TYPE_FIXED_WSTRING_UNBOUNDED_SEQUENCE: int = 164
+    FIELD_TYPE_BOUNDED_STRING_UNBOUNDED_SEQUENCE: int = 165
+    FIELD_TYPE_BOUNDED_WSTRING_UNBOUNDED_SEQUENCE: int = 166
+
+    def __init__(
+        self,
+        *,
+        type_id: int = ...,
+        capacity: int = ...,
+        string_capacity: int = ...,
+        nested_type_name: str = ...,
+    ) -> None: ...
+    @classmethod
+    def get_fields_and_field_types(cls) -> dict[str, str]: ...
+
+    # Members
+    @property
+    def type_id(self) -> int: ...
+    @type_id.setter
+    def type_id(self, value: int) -> None: ...
+    @property
+    def capacity(self) -> int: ...
+    @capacity.setter
+    def capacity(self, value: int) -> None: ...
+    @property
+    def string_capacity(self) -> int: ...
+    @string_capacity.setter
+    def string_capacity(self, value: int) -> None: ...
+    @property
+    def nested_type_name(self) -> str: ...
+    @nested_type_name.setter
+    def nested_type_name(self, value: str) -> None: ...

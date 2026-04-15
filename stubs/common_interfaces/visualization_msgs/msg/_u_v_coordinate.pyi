@@ -1,0 +1,23 @@
+# This file was generated automatically by
+# `scripts/generate_stubs.py`.
+# Do not modify it manually. If needed re-run the script.
+
+class UVCoordinate:
+    def __init__(
+        self,
+        *,
+        u: float = ...,
+        v: float = ...,
+    ) -> None: ...
+    @classmethod
+    def get_fields_and_field_types(cls) -> dict[str, str]: ...
+
+    # Members
+    @property
+    def u(self) -> float: ...
+    @u.setter
+    def u(self, value: float) -> None: ...
+    @property
+    def v(self) -> float: ...
+    @v.setter
+    def v(self, value: float) -> None: ...

@@ -1,0 +1,30 @@
+# This file was generated automatically by
+# `scripts/generate_stubs.py`.
+# Do not modify it manually. If needed re-run the script.
+
+import std_msgs.msg
+
+class RelativeHumidity:
+    def __init__(
+        self,
+        *,
+        header: std_msgs.msg.Header = ...,
+        relative_humidity: float = ...,
+        variance: float = ...,
+    ) -> None: ...
+    @classmethod
+    def get_fields_and_field_types(cls) -> dict[str, str]: ...
+
+    # Members
+    @property
+    def header(self) -> std_msgs.msg.Header: ...
+    @header.setter
+    def header(self, value: std_msgs.msg.Header) -> None: ...
+    @property
+    def relative_humidity(self) -> float: ...
+    @relative_humidity.setter
+    def relative_humidity(self, value: float) -> None: ...
+    @property
+    def variance(self) -> float: ...
+    @variance.setter
+    def variance(self, value: float) -> None: ...

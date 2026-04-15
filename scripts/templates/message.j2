@@ -1,0 +1,31 @@
+# This file was generated automatically by
+# `scripts/generate_stubs.py`.
+# Do not modify it manually. If needed re-run the script.
+
+
+{% for _import in imports %}
+{{ _import }}
+{% endfor %}
+
+
+class {{ name }}:
+    {% if constants %}# Constants{% endif %}
+    {% for field, type_value in constants.items() %}{{ field }}: {{ type_value[0]|safe }} = {{ type_value[1] }}
+    {% endfor %}
+
+    def __init__(
+        self,
+        {% if fields %}*,
+        {% for field, _type in fields.items() %}
+        {{ field }}: {{ _type|safe }} = ...,{% if field in builtins %}  # noqa: A002{% endif %}
+        {% endfor %}{% endif %}
+    ) -> None: ...
+    @classmethod
+    def get_fields_and_field_types(cls) -> dict[str, str]: ...
+
+    # Members{% for field, _type in fields.items() %}
+    @property
+    def {{ field }}(self) -> {{ _type|safe }}: ...
+    @{{ field }}.setter
+    def {{ field }}(self, value: {{ _type|safe }}) -> None: ...
+    {% endfor %}

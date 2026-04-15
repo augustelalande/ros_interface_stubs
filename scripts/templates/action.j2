@@ -1,0 +1,206 @@
+# This file was generated automatically by
+# `scripts/generate_stubs.py`.
+# Do not modify it manually. If needed re-run the script.
+
+import sys
+
+if sys.version_info >= (3, 10):
+    from typing import TypeAlias
+else:
+    from typing_extensions import TypeAlias
+
+import builtin_interfaces.msg
+import unique_identifier_msgs.msg
+{% for _import in imports %}
+{{ _import }}
+{% endfor %}
+
+
+class {{ name }}_Goal:
+    {% if goal_constants %}# Constants{% endif %}
+    {% for field, type_value in goal_constants.items() %}
+    {{ field }}: {{ type_value[0]|safe }} = {{ type_value[1] }}
+    {% endfor %}
+
+    def __init__(
+        self
+        {% if goal_fields %},*,{% endif %}
+        {% for field, _type in goal_fields.items() %}
+        {{ field }}: {{ _type|safe }} = ...,
+        {% endfor %}
+    ) -> None: ...
+    @classmethod
+    def get_fields_and_field_types(cls) -> dict[str, str]: ...
+    {% if goal_fields %}# Members{% endif %}{% for field, _type in goal_fields.items() %}
+    @property
+    def {{ field }}(self) -> {{ _type|safe }}: ...
+    @{{ field }}.setter
+    def {{ field }}(self, value: {{ _type|safe }}) -> None: ...
+    {% endfor %}
+
+
+class {{ name }}_Result:
+    {% if result_constants %}# Constants{% endif %}
+    {% for field, type_value in result_constants.items() %}
+    {{ field }}: {{ type_value[0]|safe }} = {{ type_value[1] }}
+    {% endfor %}
+
+    def __init__(
+        self
+        {% if result_fields %},*,{% endif %}
+        {% for field, _type in result_fields.items() %}
+        {{ field }}: {{ _type|safe }} = ...,
+        {% endfor %}
+    ) -> None: ...
+    @classmethod
+    def get_fields_and_field_types(cls) -> dict[str, str]: ...
+    {% if result_fields %}# Members{% endif %}{% for field, _type in result_fields.items() %}
+    @property
+    def {{ field }}(self) -> {{ _type|safe }}: ...
+    @{{ field }}.setter
+    def {{ field }}(self, value: {{ _type|safe }}) -> None: ...
+    {% endfor %}
+
+
+class {{ name }}_Feedback:
+    {% if feedback_constants %}# Constants{% endif %}
+    {% for field, type_value in feedback_constants.items() %}
+    {{ field }}: {{ type_value[0]|safe }} = {{ type_value[1] }}
+    {% endfor %}
+
+    def __init__(
+        self
+        {% if feedback_fields %},*,{% endif %}
+        {% for field, _type in feedback_fields.items() %}
+        {{ field }}: {{ _type|safe }} = ...,
+        {% endfor %}
+    ) -> None: ...
+    @classmethod
+    def get_fields_and_field_types(cls) -> dict[str, str]: ...
+    {% if feedback_fields %}# Members{% endif %}{% for field, _type in feedback_fields.items() %}
+    @property
+    def {{ field }}(self) -> {{ _type|safe }}: ...
+    @{{ field }}.setter
+    def {{ field }}(self, value: {{ _type|safe }}) -> None: ...
+    {% endfor %}
+
+
+class {{ name }}_SendGoal_Request:
+    def __init__(
+        self,
+        *,
+        goal_id: unique_identifier_msgs.msg.UUID = ...,
+        goal: {{ name }}_Goal = ...,
+    ) -> None: ...
+    @classmethod
+    def get_fields_and_field_types(cls) -> dict[str, str]: ...
+    # Members
+    @property
+    def goal_id(self) -> unique_identifier_msgs.msg.UUID: ...
+    @goal_id.setter
+    def goal_id(self, value: unique_identifier_msgs.msg.UUID) -> None: ...
+    @property
+    def goal(self) -> {{ name }}_Goal: ...
+    @goal.setter
+    def goal(self, value: {{ name }}_Goal) -> None: ...
+
+
+class {{ name }}_SendGoal_Response:
+    def __init__(
+        self,
+        *,
+        accepted: bool = ...,
+        stamp: builtin_interfaces.msg.Time = ...,
+    ) -> None: ...
+    @classmethod
+    def get_fields_and_field_types(cls) -> dict[str, str]: ...
+    # Members
+    @property
+    def accepted(self) -> bool: ...
+    @accepted.setter
+    def accepted(self, value: bool) -> None: ...
+    @property
+    def stamp(self) -> builtin_interfaces.msg.Time: ...
+    @stamp.setter
+    def stamp(self, value: builtin_interfaces.msg.Time) -> None: ...
+
+
+class {{ name }}_SendGoal:
+    Request: TypeAlias = {{ name }}_SendGoal_Request
+    Response: TypeAlias = {{ name }}_SendGoal_Response
+
+
+class {{ name }}_GetResult_Request:
+    def __init__(
+        self,
+        *,
+        goal_id: unique_identifier_msgs.msg.UUID = ...,
+    ) -> None: ...
+    @classmethod
+    def get_fields_and_field_types(cls) -> dict[str, str]: ...
+    # Members
+    @property
+    def goal_id(self) -> unique_identifier_msgs.msg.UUID: ...
+    @goal_id.setter
+    def goal_id(self, value: unique_identifier_msgs.msg.UUID) -> None: ...
+
+
+class {{ name }}_GetResult_Response:
+    def __init__(
+        self,
+        *,
+        status: int = ...,
+        result: {{ name }}_Result = ...,
+    ) -> None: ...
+    @classmethod
+    def get_fields_and_field_types(cls) -> dict[str, str]: ...
+    # Members
+    @property
+    def status(self) -> int: ...
+    @status.setter
+    def status(self, value: int) -> None: ...
+    @property
+    def result(self) -> {{ name }}_Result: ...
+    @result.setter
+    def result(self, value: {{ name }}_Result) -> None: ...
+
+
+class {{ name }}_GetResult:
+    Request: TypeAlias = {{ name }}_GetResult_Request
+    Response: TypeAlias = {{ name }}_GetResult_Response
+
+
+class {{ name }}_FeedbackMessage:
+    def __init__(
+        self,
+        *,
+        goal_id: unique_identifier_msgs.msg.UUID = ...,
+        feedback: {{ name }}_Feedback = ...,
+    ) -> None: ...
+    @classmethod
+    def get_fields_and_field_types(cls) -> dict[str, str]: ...
+    # Members
+    @property
+    def goal_id(self) -> unique_identifier_msgs.msg.UUID: ...
+    @goal_id.setter
+    def goal_id(self, value: unique_identifier_msgs.msg.UUID) -> None: ...
+    @property
+    def feedback(self) -> {{ name }}_Feedback: ...
+    @feedback.setter
+    def feedback(self, value: {{ name }}_Feedback) -> None: ...
+
+
+class {{ name }}:
+    Goal: TypeAlias = {{ name }}_Goal
+    Result: TypeAlias = {{ name }}_Result
+    Feedback: TypeAlias = {{ name }}_Feedback
+
+    class Impl:
+        SendGoalService: TypeAlias = {{ name }}_SendGoal
+        GetResultService: TypeAlias = {{ name }}_GetResult
+        FeedbackMessage: TypeAlias = {{ name }}_FeedbackMessage
+
+        from action_msgs.msg._goal_status_array import (
+            GoalStatusArray as GoalStatusMessage,
+        )
+        from action_msgs.srv._cancel_goal import CancelGoal as CancelGoalService

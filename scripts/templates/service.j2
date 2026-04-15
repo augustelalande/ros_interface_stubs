@@ -1,0 +1,65 @@
+# This file was generated automatically by
+# `scripts/generate_stubs.py`.
+# Do not modify it manually. If needed re-run the script.
+
+import sys
+
+if sys.version_info >= (3, 10):
+    from typing import TypeAlias
+else:
+    from typing_extensions import TypeAlias
+
+{% for _import in imports %}
+{{ _import }}
+{% endfor %}
+
+
+class {{ name }}_Request:
+    {% if request_constants %}# Constants{% endif %}
+    {% for field, type_value in request_constants.items() %}
+    {{ field }}: {{ type_value[0]|safe }} = {{ type_value[1] }}
+    {% endfor %}
+
+    def __init__(
+        self
+        {% if request_fields %},*,{% endif %}
+        {% for field, _type in request_fields.items() %}
+        {{ field }}: {{ _type|safe }} = ...,
+        {% endfor %}
+    ) -> None: ...
+    @classmethod
+    def get_fields_and_field_types(cls) -> dict[str, str]: ...
+    {% if request_fields %}# Members{% endif %}{% for field, _type in request_fields.items() %}
+    @property
+    def {{ field }}(self) -> {{ _type|safe }}: ...
+    @{{ field }}.setter
+    def {{ field }}(self, value: {{ _type|safe }}) -> None: ...
+    {% endfor %}
+
+
+class {{ name }}_Response:
+    {% if response_constants %}# Constants{% endif %}
+    {% for field, type_value in response_constants.items() %}
+    {{ field }}: {{ type_value[0]|safe }} = {{ type_value[1] }}
+    {% endfor %}
+
+    def __init__(
+        self
+        {% if response_fields %},*,{% endif %}
+        {% for field, _type in response_fields.items() %}
+        {{ field }}: {{ _type|safe }} = ...,
+        {% endfor %}
+    ) -> None: ...
+    @classmethod
+    def get_fields_and_field_types(cls) -> dict[str, str]: ...
+    # Members{% for field, _type in response_fields.items() %}
+    @property
+    def {{ field }}(self) -> {{ _type|safe }}: ...
+    @{{ field }}.setter
+    def {{ field }}(self, value: {{ _type|safe }}) -> None: ...
+    {% endfor %}
+
+
+class {{ name }}:
+    Request: TypeAlias = {{ name }}_Request
+    Response: TypeAlias = {{ name }}_Response
