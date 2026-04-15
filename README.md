@@ -47,6 +47,23 @@ extraPaths = ["stubs/common_interfaces"]
 mypy_path = stubs/common_interfaces
 ```
 
+## Generating stubs for other packages
+
+The generator works on any ROS 2 interface package, not just the ones included here. To generate stubs for additional packages, place the package folder under `interfaces/` and re-run the script:
+
+```
+interfaces/
+  my_custom_msgs/        # added package (contains msg/, srv/, and/or action/)
+  my_group/              # or nested under a group folder
+    my_other_msgs/
+```
+
+```bash
+uv run python scripts/generate_stubs.py
+```
+
+The generated stubs will appear under `stubs/` following the same structure, ready to copy into your project.
+
 ## Regenerating stubs
 
 The stubs are generated from the interface definitions under `interfaces/`. To regenerate them after updating the interface submodules:
