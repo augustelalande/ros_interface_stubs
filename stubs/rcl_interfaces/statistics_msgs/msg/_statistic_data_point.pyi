@@ -4,7 +4,11 @@
 
 class StatisticDataPoint:
     def __init__(
-        self, *, data_type: int = ..., data: float = ..., check_fields: bool = ...
+        self,
+        *,
+        data_type: int = ...,
+        data: float = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

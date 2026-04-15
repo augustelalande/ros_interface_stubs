@@ -13,7 +13,10 @@ import std_msgs.msg
 
 class SaveMap_Request:
     def __init__(
-        self, *, filename: std_msgs.msg.String = ..., check_fields: bool = ...
+        self,
+        *,
+        filename: std_msgs.msg.String = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...
@@ -24,7 +27,11 @@ class SaveMap_Request:
     def filename(self, value: std_msgs.msg.String) -> None: ...
 
 class SaveMap_Response:
-    def __init__(self, *, check_fields: bool = ...) -> None: ...
+    def __init__(
+        self,
+        *,
+        check_fields: bool = ...,
+    ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...
     # Members

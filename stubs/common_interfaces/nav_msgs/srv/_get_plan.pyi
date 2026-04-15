@@ -39,7 +39,10 @@ class GetPlan_Request:
 
 class GetPlan_Response:
     def __init__(
-        self, *, plan: nav_msgs.msg.Path = ..., check_fields: bool = ...
+        self,
+        *,
+        plan: nav_msgs.msg.Path = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

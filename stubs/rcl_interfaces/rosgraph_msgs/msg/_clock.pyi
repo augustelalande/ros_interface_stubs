@@ -6,7 +6,10 @@ import builtin_interfaces.msg
 
 class Clock:
     def __init__(
-        self, *, clock: builtin_interfaces.msg.Time = ..., check_fields: bool = ...
+        self,
+        *,
+        clock: builtin_interfaces.msg.Time = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

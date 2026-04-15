@@ -10,13 +10,20 @@ else:
     from typing_extensions import TypeAlias
 
 class QueryCalibrationState_Request:
-    def __init__(self, *, check_fields: bool = ...) -> None: ...
+    def __init__(
+        self,
+        *,
+        check_fields: bool = ...,
+    ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...
 
 class QueryCalibrationState_Response:
     def __init__(
-        self, *, is_calibrated: bool = ..., check_fields: bool = ...
+        self,
+        *,
+        is_calibrated: bool = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

@@ -4,7 +4,10 @@
 
 class LaserEcho:
     def __init__(
-        self, *, echoes: list[float] = ..., check_fields: bool = ...
+        self,
+        *,
+        echoes: list[float] = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

@@ -13,7 +13,10 @@ import action_msgs.msg
 
 class CancelGoal_Request:
     def __init__(
-        self, *, goal_info: action_msgs.msg.GoalInfo = ..., check_fields: bool = ...
+        self,
+        *,
+        goal_info: action_msgs.msg.GoalInfo = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

@@ -12,13 +12,20 @@ else:
 import sensor_msgs.msg
 
 class GetPointMap_Request:
-    def __init__(self, *, check_fields: bool = ...) -> None: ...
+    def __init__(
+        self,
+        *,
+        check_fields: bool = ...,
+    ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...
 
 class GetPointMap_Response:
     def __init__(
-        self, *, map: sensor_msgs.msg.PointCloud2 = ..., check_fields: bool = ...
+        self,
+        *,
+        map: sensor_msgs.msg.PointCloud2 = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

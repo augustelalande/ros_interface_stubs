@@ -6,7 +6,10 @@ import geometry_msgs.msg
 
 class Polygon:
     def __init__(
-        self, *, points: list[geometry_msgs.msg.Point32] = ..., check_fields: bool = ...
+        self,
+        *,
+        points: list[geometry_msgs.msg.Point32] = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

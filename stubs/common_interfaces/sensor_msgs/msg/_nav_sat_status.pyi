@@ -16,7 +16,11 @@ class NavSatStatus:
     SERVICE_GALILEO: int = 8
 
     def __init__(
-        self, *, status: int = ..., service: int = ..., check_fields: bool = ...
+        self,
+        *,
+        status: int = ...,
+        service: int = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

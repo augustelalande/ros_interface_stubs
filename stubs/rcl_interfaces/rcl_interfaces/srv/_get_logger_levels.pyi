@@ -12,7 +12,12 @@ else:
 import rcl_interfaces.msg
 
 class GetLoggerLevels_Request:
-    def __init__(self, *, names: list[str] = ..., check_fields: bool = ...) -> None: ...
+    def __init__(
+        self,
+        *,
+        names: list[str] = ...,
+        check_fields: bool = ...,
+    ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...
     # Members

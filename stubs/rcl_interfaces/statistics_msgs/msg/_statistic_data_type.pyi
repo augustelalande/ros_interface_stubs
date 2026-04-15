@@ -11,7 +11,11 @@ class StatisticDataType:
     STATISTICS_DATA_TYPE_STDDEV: int = 4
     STATISTICS_DATA_TYPE_SAMPLE_COUNT: int = 5
 
-    def __init__(self, *, check_fields: bool = ...) -> None: ...
+    def __init__(
+        self,
+        *,
+        check_fields: bool = ...,
+    ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...
 

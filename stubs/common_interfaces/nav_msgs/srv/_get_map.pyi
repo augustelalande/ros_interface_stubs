@@ -12,13 +12,20 @@ else:
 import nav_msgs.msg
 
 class GetMap_Request:
-    def __init__(self, *, check_fields: bool = ...) -> None: ...
+    def __init__(
+        self,
+        *,
+        check_fields: bool = ...,
+    ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...
 
 class GetMap_Response:
     def __init__(
-        self, *, map: nav_msgs.msg.OccupancyGrid = ..., check_fields: bool = ...
+        self,
+        *,
+        map: nav_msgs.msg.OccupancyGrid = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

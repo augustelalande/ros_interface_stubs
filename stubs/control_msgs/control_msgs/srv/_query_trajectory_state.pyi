@@ -13,7 +13,10 @@ import builtin_interfaces.msg
 
 class QueryTrajectoryState_Request:
     def __init__(
-        self, *, time: builtin_interfaces.msg.Time = ..., check_fields: bool = ...
+        self,
+        *,
+        time: builtin_interfaces.msg.Time = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...
