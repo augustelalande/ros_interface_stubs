@@ -4,10 +4,7 @@
 
 class ChannelFloat32:
     def __init__(
-        self,
-        *,
-        name: str = ...,
-        values: list[float] = ...,
+        self, *, name: str = ..., values: list[float] = ..., check_fields: bool = ...
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

@@ -16,6 +16,7 @@ class ParameterValue:
         integer_array_value: list[int] = ...,
         double_array_value: list[float] = ...,
         string_array_value: list[str] = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

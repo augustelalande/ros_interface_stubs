@@ -12,11 +12,7 @@ else:
 import nav_msgs.msg
 
 class LoadMap_Request:
-    def __init__(
-        self,
-        *,
-        map_url: str = ...,
-    ) -> None: ...
+    def __init__(self, *, map_url: str = ..., check_fields: bool = ...) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...
     # Members
@@ -43,6 +39,7 @@ class LoadMap_Response:
         *,
         map: nav_msgs.msg.OccupancyGrid = ...,
         result: int = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

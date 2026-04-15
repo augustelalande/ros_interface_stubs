@@ -15,6 +15,7 @@ class MetricsMessage:
         window_start: builtin_interfaces.msg.Time = ...,
         window_stop: builtin_interfaces.msg.Time = ...,
         statistics: list[statistics_msgs.msg.StatisticDataPoint] = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

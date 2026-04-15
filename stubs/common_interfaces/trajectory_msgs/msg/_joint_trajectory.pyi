@@ -12,6 +12,7 @@ class JointTrajectory:
         header: std_msgs.msg.Header = ...,
         joint_names: list[str] = ...,
         points: list[trajectory_msgs.msg.JointTrajectoryPoint] = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

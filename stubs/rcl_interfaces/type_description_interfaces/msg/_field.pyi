@@ -11,6 +11,7 @@ class Field:
         name: str = ...,
         type: type_description_interfaces.msg.FieldType = ...,  # noqa: A002
         default_value: str = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

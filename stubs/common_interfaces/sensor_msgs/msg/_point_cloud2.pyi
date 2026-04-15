@@ -18,6 +18,7 @@ class PointCloud2:
         row_step: int = ...,
         data: list[int] = ...,
         is_dense: bool = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

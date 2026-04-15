@@ -10,6 +10,7 @@ class Transform:
         *,
         translation: geometry_msgs.msg.Vector3 = ...,
         rotation: geometry_msgs.msg.Quaternion = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

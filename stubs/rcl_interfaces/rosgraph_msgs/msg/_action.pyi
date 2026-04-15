@@ -14,6 +14,7 @@ class Action:
         cancel_goal: rosgraph_msgs.msg.Service = ...,
         feedback: rosgraph_msgs.msg.Topic = ...,
         status: rosgraph_msgs.msg.Topic = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

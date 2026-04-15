@@ -11,6 +11,7 @@ class CompressedImage:
         header: std_msgs.msg.Header = ...,
         format: str = ...,  # noqa: A002
         data: list[int] = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

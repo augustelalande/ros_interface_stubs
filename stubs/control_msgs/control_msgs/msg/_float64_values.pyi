@@ -10,6 +10,7 @@ class Float64Values:
         *,
         header: std_msgs.msg.Header = ...,
         values: list[float] = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

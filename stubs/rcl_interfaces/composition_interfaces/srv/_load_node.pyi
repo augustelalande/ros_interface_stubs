@@ -23,6 +23,7 @@ class LoadNode_Request:
         remap_rules: list[str] = ...,
         parameters: list[rcl_interfaces.msg.Parameter] = ...,
         extra_arguments: list[rcl_interfaces.msg.Parameter] = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...
@@ -68,6 +69,7 @@ class LoadNode_Response:
         error_message: str = ...,
         full_node_name: str = ...,
         unique_id: int = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

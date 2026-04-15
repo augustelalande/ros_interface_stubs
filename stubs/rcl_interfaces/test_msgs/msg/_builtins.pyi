@@ -10,6 +10,7 @@ class Builtins:
         *,
         duration_value: builtin_interfaces.msg.Duration = ...,
         time_value: builtin_interfaces.msg.Time = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

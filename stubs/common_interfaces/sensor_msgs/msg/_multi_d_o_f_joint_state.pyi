@@ -14,6 +14,7 @@ class MultiDOFJointState:
         transforms: list[geometry_msgs.msg.Transform] = ...,
         twist: list[geometry_msgs.msg.Twist] = ...,
         wrench: list[geometry_msgs.msg.Wrench] = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

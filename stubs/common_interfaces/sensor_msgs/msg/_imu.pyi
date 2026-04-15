@@ -16,6 +16,7 @@ class Imu:
         angular_velocity_covariance: list[float] = ...,
         linear_acceleration: geometry_msgs.msg.Vector3 = ...,
         linear_acceleration_covariance: list[float] = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

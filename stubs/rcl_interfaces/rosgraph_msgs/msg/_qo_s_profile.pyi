@@ -37,6 +37,7 @@ class QoSProfile:
         durability: int = ...,
         liveliness: int = ...,
         liveliness_lease_duration: builtin_interfaces.msg.Duration = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

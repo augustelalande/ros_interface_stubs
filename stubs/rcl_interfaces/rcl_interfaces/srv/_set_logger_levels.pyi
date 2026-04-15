@@ -16,6 +16,7 @@ class SetLoggerLevels_Request:
         self,
         *,
         levels: list[rcl_interfaces.msg.LoggerLevel] = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...
@@ -30,6 +31,7 @@ class SetLoggerLevels_Response:
         self,
         *,
         results: list[rcl_interfaces.msg.SetLoggerLevelsResult] = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

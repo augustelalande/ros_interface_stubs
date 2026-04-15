@@ -18,6 +18,7 @@ class GetTypeDescription_Request:
         type_name: str = ...,
         type_hash: str = ...,
         include_type_sources: bool = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...
@@ -44,6 +45,7 @@ class GetTypeDescription_Response:
         type_description: type_description_interfaces.msg.TypeDescription = ...,
         type_sources: list[type_description_interfaces.msg.TypeSource] = ...,
         extra_information: list[type_description_interfaces.msg.KeyValue] = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

@@ -11,6 +11,7 @@ class PoseArray:
         *,
         header: std_msgs.msg.Header = ...,
         poses: list[geometry_msgs.msg.Pose] = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

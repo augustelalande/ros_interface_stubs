@@ -10,11 +10,7 @@ else:
     from typing_extensions import TypeAlias
 
 class UnloadNode_Request:
-    def __init__(
-        self,
-        *,
-        unique_id: int = ...,
-    ) -> None: ...
+    def __init__(self, *, unique_id: int = ..., check_fields: bool = ...) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...
     # Members
@@ -25,10 +21,7 @@ class UnloadNode_Request:
 
 class UnloadNode_Response:
     def __init__(
-        self,
-        *,
-        success: bool = ...,
-        error_message: str = ...,
+        self, *, success: bool = ..., error_message: str = ..., check_fields: bool = ...
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

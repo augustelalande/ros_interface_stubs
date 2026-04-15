@@ -13,6 +13,7 @@ class Odometry:
         child_frame_id: str = ...,
         pose: geometry_msgs.msg.PoseWithCovariance = ...,
         twist: geometry_msgs.msg.TwistWithCovariance = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

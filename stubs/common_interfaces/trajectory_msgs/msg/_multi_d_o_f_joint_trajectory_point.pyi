@@ -13,6 +13,7 @@ class MultiDOFJointTrajectoryPoint:
         velocities: list[geometry_msgs.msg.Twist] = ...,
         accelerations: list[geometry_msgs.msg.Twist] = ...,
         time_from_start: builtin_interfaces.msg.Duration = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

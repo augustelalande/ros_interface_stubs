@@ -17,10 +17,7 @@ class ListParameters_Request:
     DEPTH_RECURSIVE: int = 0
 
     def __init__(
-        self,
-        *,
-        prefixes: list[str] = ...,
-        depth: int = ...,
+        self, *, prefixes: list[str] = ..., depth: int = ..., check_fields: bool = ...
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...
@@ -39,6 +36,7 @@ class ListParameters_Response:
         self,
         *,
         result: rcl_interfaces.msg.ListParametersResult = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

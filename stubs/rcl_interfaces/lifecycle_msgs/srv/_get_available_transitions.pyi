@@ -12,7 +12,7 @@ else:
 import lifecycle_msgs.msg
 
 class GetAvailableTransitions_Request:
-    def __init__(self) -> None: ...
+    def __init__(self, *, check_fields: bool = ...) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...
 
@@ -21,6 +21,7 @@ class GetAvailableTransitions_Response:
         self,
         *,
         available_transitions: list[lifecycle_msgs.msg.TransitionDescription] = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

@@ -19,6 +19,7 @@ class GetMapROI_Request:
         y: float = ...,
         l_x: float = ...,
         l_y: float = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...
@@ -42,9 +43,7 @@ class GetMapROI_Request:
 
 class GetMapROI_Response:
     def __init__(
-        self,
-        *,
-        sub_map: nav_msgs.msg.OccupancyGrid = ...,
+        self, *, sub_map: nav_msgs.msg.OccupancyGrid = ..., check_fields: bool = ...
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

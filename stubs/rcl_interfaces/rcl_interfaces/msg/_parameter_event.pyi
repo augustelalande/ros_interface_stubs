@@ -14,6 +14,7 @@ class ParameterEvent:
         new_parameters: list[rcl_interfaces.msg.Parameter] = ...,
         changed_parameters: list[rcl_interfaces.msg.Parameter] = ...,
         deleted_parameters: list[rcl_interfaces.msg.Parameter] = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

@@ -12,11 +12,7 @@ else:
 import rcl_interfaces.msg
 
 class DescribeParameters_Request:
-    def __init__(
-        self,
-        *,
-        names: list[str] = ...,
-    ) -> None: ...
+    def __init__(self, *, names: list[str] = ..., check_fields: bool = ...) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...
     # Members
@@ -30,6 +26,7 @@ class DescribeParameters_Response:
         self,
         *,
         descriptors: list[rcl_interfaces.msg.ParameterDescriptor] = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

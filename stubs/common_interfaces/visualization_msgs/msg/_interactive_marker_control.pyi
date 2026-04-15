@@ -32,6 +32,7 @@ class InteractiveMarkerControl:
         markers: list[visualization_msgs.msg.Marker] = ...,
         independent_marker_orientation: bool = ...,
         description: str = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

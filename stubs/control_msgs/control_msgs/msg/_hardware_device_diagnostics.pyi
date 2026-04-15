@@ -12,6 +12,7 @@ class HardwareDeviceDiagnostics:
         header: std_msgs.msg.Header = ...,
         device_id: str = ...,
         entries: list[diagnostic_msgs.msg.KeyValue] = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

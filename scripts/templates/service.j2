@@ -22,10 +22,11 @@ class {{ name }}_Request:
 
     def __init__(
         self
-        {% if request_fields %},*,{% endif %}
+        ,*,
         {% for field, _type in request_fields.items() %}
         {{ field }}: {{ _type|safe }} = ...,
         {% endfor %}
+        check_fields: bool = ...
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...
@@ -45,10 +46,11 @@ class {{ name }}_Response:
 
     def __init__(
         self
-        {% if response_fields %},*,{% endif %}
+        ,*,
         {% for field, _type in response_fields.items() %}
         {{ field }}: {{ _type|safe }} = ...,
         {% endfor %}
+        check_fields: bool = ...
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

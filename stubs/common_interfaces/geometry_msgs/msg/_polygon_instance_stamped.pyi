@@ -11,6 +11,7 @@ class PolygonInstanceStamped:
         *,
         header: std_msgs.msg.Header = ...,
         polygon: geometry_msgs.msg.PolygonInstance = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

@@ -17,6 +17,7 @@ class InteractiveMarker:
         scale: float = ...,
         menu_entries: list[visualization_msgs.msg.MenuEntry] = ...,
         controls: list[visualization_msgs.msg.InteractiveMarkerControl] = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

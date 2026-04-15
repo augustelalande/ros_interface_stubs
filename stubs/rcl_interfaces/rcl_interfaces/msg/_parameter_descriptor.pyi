@@ -16,6 +16,7 @@ class ParameterDescriptor:
         dynamic_typing: bool = ...,
         floating_point_range: list[rcl_interfaces.msg.FloatingPointRange] = ...,
         integer_range: list[rcl_interfaces.msg.IntegerRange] = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

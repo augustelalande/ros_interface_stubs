@@ -14,6 +14,7 @@ class VDA5050SafetyState:
         *,
         e_stop: str = ...,
         field_violation: bool = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

@@ -6,9 +6,7 @@ import rosgraph_msgs.msg
 
 class Graph:
     def __init__(
-        self,
-        *,
-        nodes: list[rosgraph_msgs.msg.Node] = ...,
+        self, *, nodes: list[rosgraph_msgs.msg.Node] = ..., check_fields: bool = ...
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

@@ -14,6 +14,7 @@ class TrajectoryPoint:
         velocity: geometry_msgs.msg.Twist = ...,
         acceleration: geometry_msgs.msg.Accel = ...,
         effort: geometry_msgs.msg.Wrench = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

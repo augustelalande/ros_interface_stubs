@@ -3,9 +3,7 @@
 # Do not modify it manually. If needed re-run the script.
 
 class Empty:
-    def __init__(
-        self,
-    ) -> None: ...
+    def __init__(self, *, check_fields: bool = ...) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...
 

@@ -14,6 +14,7 @@ class MapMetaData:
         width: int = ...,
         height: int = ...,
         origin: geometry_msgs.msg.Pose = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

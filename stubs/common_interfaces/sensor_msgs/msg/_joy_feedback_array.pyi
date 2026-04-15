@@ -9,6 +9,7 @@ class JoyFeedbackArray:
         self,
         *,
         array: list[sensor_msgs.msg.JoyFeedback] = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

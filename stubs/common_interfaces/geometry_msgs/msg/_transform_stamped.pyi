@@ -12,6 +12,7 @@ class TransformStamped:
         header: std_msgs.msg.Header = ...,
         child_frame_id: str = ...,
         transform: geometry_msgs.msg.Transform = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

@@ -22,6 +22,7 @@ class AdmittanceControllerState:
         admittance_velocity: geometry_msgs.msg.TwistStamped = ...,
         wrench_base: geometry_msgs.msg.WrenchStamped = ...,
         joint_state: sensor_msgs.msg.JointState = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

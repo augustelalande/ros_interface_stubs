@@ -13,6 +13,7 @@ class PointCloud:
         header: std_msgs.msg.Header = ...,
         points: list[geometry_msgs.msg.Point32] = ...,
         channels: list[sensor_msgs.msg.ChannelFloat32] = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

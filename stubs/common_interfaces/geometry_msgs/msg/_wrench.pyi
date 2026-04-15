@@ -10,6 +10,7 @@ class Wrench:
         *,
         force: geometry_msgs.msg.Vector3 = ...,
         torque: geometry_msgs.msg.Vector3 = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

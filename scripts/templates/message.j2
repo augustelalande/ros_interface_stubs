@@ -15,10 +15,11 @@ class {{ name }}:
 
     def __init__(
         self,
-        {% if fields %}*,
+        *,
         {% for field, _type in fields.items() %}
         {{ field }}: {{ _type|safe }} = ...,{% if field in builtins %}  # noqa: A002{% endif %}
-        {% endfor %}{% endif %}
+        {% endfor %}
+        check_fields: bool = ...
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

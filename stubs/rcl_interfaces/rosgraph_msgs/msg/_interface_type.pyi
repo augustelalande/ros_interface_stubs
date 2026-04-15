@@ -10,6 +10,7 @@ class InterfaceType:
         *,
         name: str = ...,
         hash: rosgraph_msgs.msg.TypeHash = ...,  # noqa: A002
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

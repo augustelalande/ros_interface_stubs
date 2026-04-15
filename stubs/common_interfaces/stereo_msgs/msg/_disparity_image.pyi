@@ -17,6 +17,7 @@ class DisparityImage:
         min_disparity: float = ...,
         max_disparity: float = ...,
         delta_d: float = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

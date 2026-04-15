@@ -24,6 +24,7 @@ class CANopenState:
         nmt_state: int = ...,
         dsp_402_state: int = ...,
         last_emcy_code: int = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

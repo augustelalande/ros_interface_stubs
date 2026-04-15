@@ -13,9 +13,7 @@ import builtin_interfaces.msg
 
 class QueryTrajectoryState_Request:
     def __init__(
-        self,
-        *,
-        time: builtin_interfaces.msg.Time = ...,
+        self, *, time: builtin_interfaces.msg.Time = ..., check_fields: bool = ...
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...
@@ -35,6 +33,7 @@ class QueryTrajectoryState_Response:
         position: list[float] = ...,
         velocity: list[float] = ...,
         acceleration: list[float] = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

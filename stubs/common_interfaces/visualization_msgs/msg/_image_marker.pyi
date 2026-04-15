@@ -32,6 +32,7 @@ class ImageMarker:
         lifetime: builtin_interfaces.msg.Duration = ...,
         points: list[geometry_msgs.msg.Point] = ...,
         outline_colors: list[std_msgs.msg.ColorRGBA] = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

@@ -11,6 +11,7 @@ class InteractiveMarkerInit:
         server_id: str = ...,
         seq_num: int = ...,
         markers: list[visualization_msgs.msg.InteractiveMarker] = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

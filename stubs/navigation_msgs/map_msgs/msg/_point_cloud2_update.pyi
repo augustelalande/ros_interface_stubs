@@ -16,6 +16,7 @@ class PointCloud2Update:
         header: std_msgs.msg.Header = ...,
         type: int = ...,  # noqa: A002
         points: sensor_msgs.msg.PointCloud2 = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

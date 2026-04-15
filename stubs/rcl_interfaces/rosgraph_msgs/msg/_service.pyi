@@ -13,6 +13,7 @@ class Service:
         request_qos: rosgraph_msgs.msg.QoSProfile = ...,
         response_type: rosgraph_msgs.msg.InterfaceType = ...,
         response_qos: rosgraph_msgs.msg.QoSProfile = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

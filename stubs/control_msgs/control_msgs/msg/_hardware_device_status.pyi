@@ -15,6 +15,7 @@ class HardwareDeviceStatus:
         canopen_states: list[control_msgs.msg.CANopenState] = ...,
         ethercat_states: list[control_msgs.msg.EtherCATState] = ...,
         vda5050_states: list[control_msgs.msg.VDA5050State] = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

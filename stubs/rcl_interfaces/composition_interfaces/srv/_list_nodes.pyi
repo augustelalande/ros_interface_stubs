@@ -10,7 +10,7 @@ else:
     from typing_extensions import TypeAlias
 
 class ListNodes_Request:
-    def __init__(self) -> None: ...
+    def __init__(self, *, check_fields: bool = ...) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...
 
@@ -20,6 +20,7 @@ class ListNodes_Response:
         *,
         full_node_names: list[str] = ...,
         unique_ids: list[int] = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

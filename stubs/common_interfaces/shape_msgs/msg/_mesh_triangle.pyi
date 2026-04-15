@@ -4,9 +4,7 @@
 
 class MeshTriangle:
     def __init__(
-        self,
-        *,
-        vertex_indices: list[int] = ...,
+        self, *, vertex_indices: list[int] = ..., check_fields: bool = ...
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

@@ -10,11 +10,7 @@ else:
     from typing_extensions import TypeAlias
 
 class SetBool_Request:
-    def __init__(
-        self,
-        *,
-        data: bool = ...,
-    ) -> None: ...
+    def __init__(self, *, data: bool = ..., check_fields: bool = ...) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...
     # Members
@@ -25,10 +21,7 @@ class SetBool_Request:
 
 class SetBool_Response:
     def __init__(
-        self,
-        *,
-        success: bool = ...,
-        message: str = ...,
+        self, *, success: bool = ..., message: str = ..., check_fields: bool = ...
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

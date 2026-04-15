@@ -10,6 +10,7 @@ class ByteMultiArray:
         *,
         layout: std_msgs.msg.MultiArrayLayout = ...,
         data: list[bytes] = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

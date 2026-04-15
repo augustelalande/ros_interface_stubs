@@ -22,6 +22,7 @@ class GetPointMapROI_Request:
         l_x: float = ...,
         l_y: float = ...,
         l_z: float = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...
@@ -57,9 +58,7 @@ class GetPointMapROI_Request:
 
 class GetPointMapROI_Response:
     def __init__(
-        self,
-        *,
-        sub_map: sensor_msgs.msg.PointCloud2 = ...,
+        self, *, sub_map: sensor_msgs.msg.PointCloud2 = ..., check_fields: bool = ...
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

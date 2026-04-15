@@ -14,6 +14,7 @@ class SingleDOFState:
         error_dot: float = ...,
         time_step: float = ...,
         output: float = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

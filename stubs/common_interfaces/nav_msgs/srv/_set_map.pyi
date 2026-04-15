@@ -18,6 +18,7 @@ class SetMap_Request:
         *,
         map: nav_msgs.msg.OccupancyGrid = ...,
         initial_pose: geometry_msgs.msg.PoseWithCovarianceStamped = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...
@@ -34,11 +35,7 @@ class SetMap_Request:
     ) -> None: ...
 
 class SetMap_Response:
-    def __init__(
-        self,
-        *,
-        success: bool = ...,
-    ) -> None: ...
+    def __init__(self, *, success: bool = ..., check_fields: bool = ...) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...
     # Members

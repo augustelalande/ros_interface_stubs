@@ -26,6 +26,7 @@ class InteractiveMarkerFeedback:
         menu_entry_id: int = ...,
         mouse_point: geometry_msgs.msg.Point = ...,
         mouse_point_valid: bool = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

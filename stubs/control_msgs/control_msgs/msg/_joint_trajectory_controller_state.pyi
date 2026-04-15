@@ -21,6 +21,7 @@ class JointTrajectoryControllerState:
         multi_dof_error: trajectory_msgs.msg.MultiDOFJointTrajectoryPoint = ...,
         multi_dof_output: trajectory_msgs.msg.MultiDOFJointTrajectoryPoint = ...,
         speed_scaling_factor: float = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

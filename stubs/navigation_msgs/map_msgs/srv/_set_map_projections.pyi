@@ -12,7 +12,7 @@ else:
 import map_msgs.msg
 
 class SetMapProjections_Request:
-    def __init__(self) -> None: ...
+    def __init__(self, *, check_fields: bool = ...) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...
 
@@ -21,6 +21,7 @@ class SetMapProjections_Response:
         self,
         *,
         projected_maps_info: list[map_msgs.msg.ProjectedMapInfo] = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

@@ -18,6 +18,7 @@ class InteractiveMarkerUpdate:
         markers: list[visualization_msgs.msg.InteractiveMarker] = ...,
         poses: list[visualization_msgs.msg.InteractiveMarkerPose] = ...,
         erases: list[str] = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

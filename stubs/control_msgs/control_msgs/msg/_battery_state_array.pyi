@@ -9,6 +9,7 @@ class BatteryStateArray:
         self,
         *,
         battery_states: list[sensor_msgs.msg.BatteryState] = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

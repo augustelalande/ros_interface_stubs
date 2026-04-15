@@ -12,7 +12,7 @@ else:
 import diagnostic_msgs.msg
 
 class SelfTest_Request:
-    def __init__(self) -> None: ...
+    def __init__(self, *, check_fields: bool = ...) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...
 
@@ -23,6 +23,7 @@ class SelfTest_Response:
         id: str = ...,
         passed: bytes = ...,
         status: list[diagnostic_msgs.msg.DiagnosticStatus] = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

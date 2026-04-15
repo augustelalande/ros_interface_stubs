@@ -12,6 +12,7 @@ class TimeReference:
         header: std_msgs.msg.Header = ...,
         time_ref: builtin_interfaces.msg.Time = ...,
         source: str = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

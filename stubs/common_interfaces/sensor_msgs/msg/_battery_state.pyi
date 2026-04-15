@@ -49,6 +49,7 @@ class BatteryState:
         cell_temperature: list[float] = ...,
         location: str = ...,
         serial_number: str = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

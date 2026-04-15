@@ -16,6 +16,7 @@ class SetParametersAtomically_Request:
         self,
         *,
         parameters: list[rcl_interfaces.msg.Parameter] = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...
@@ -30,6 +31,7 @@ class SetParametersAtomically_Response:
         self,
         *,
         result: rcl_interfaces.msg.SetParametersResult = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

@@ -15,6 +15,7 @@ class MecanumDriveControllerState:
         back_right_wheel_velocity: float = ...,
         front_right_wheel_velocity: float = ...,
         reference_velocity: geometry_msgs.msg.Twist = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

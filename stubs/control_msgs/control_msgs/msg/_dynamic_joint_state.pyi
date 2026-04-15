@@ -12,6 +12,7 @@ class DynamicJointState:
         header: std_msgs.msg.Header = ...,
         joint_names: list[str] = ...,
         interface_values: list[control_msgs.msg.InterfaceValue] = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

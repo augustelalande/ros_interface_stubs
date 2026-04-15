@@ -19,6 +19,7 @@ class MultiEchoLaserScan:
         range_max: float = ...,
         ranges: list[sensor_msgs.msg.LaserEcho] = ...,
         intensities: list[sensor_msgs.msg.LaserEcho] = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

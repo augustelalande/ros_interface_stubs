@@ -11,6 +11,7 @@ class Vector3Stamped:
         *,
         header: std_msgs.msg.Header = ...,
         vector: geometry_msgs.msg.Vector3 = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

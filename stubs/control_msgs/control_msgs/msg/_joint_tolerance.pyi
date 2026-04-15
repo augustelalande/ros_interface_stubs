@@ -10,6 +10,7 @@ class JointTolerance:
         position: float = ...,
         velocity: float = ...,
         acceleration: float = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

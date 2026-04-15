@@ -9,6 +9,7 @@ class FloatingPointRange:
         from_value: float = ...,
         to_value: float = ...,
         step: float = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

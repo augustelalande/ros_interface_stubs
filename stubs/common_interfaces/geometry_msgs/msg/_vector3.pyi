@@ -9,6 +9,7 @@ class Vector3:
         x: float = ...,
         y: float = ...,
         z: float = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

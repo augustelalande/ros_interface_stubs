@@ -10,6 +10,7 @@ class ColorRGBA:
         g: float = ...,
         b: float = ...,
         a: float = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

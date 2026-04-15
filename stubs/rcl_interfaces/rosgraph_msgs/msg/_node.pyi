@@ -18,6 +18,7 @@ class Node:
         service_servers: list[rosgraph_msgs.msg.Service] = ...,
         action_clients: list[rosgraph_msgs.msg.Action] = ...,
         action_servers: list[rosgraph_msgs.msg.Action] = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

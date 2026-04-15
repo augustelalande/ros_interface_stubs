@@ -13,6 +13,7 @@ class GridCells:
         cell_width: float = ...,
         cell_height: float = ...,
         cells: list[geometry_msgs.msg.Point] = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

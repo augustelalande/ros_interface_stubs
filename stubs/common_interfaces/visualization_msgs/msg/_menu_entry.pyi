@@ -16,6 +16,7 @@ class MenuEntry:
         title: str = ...,
         command: str = ...,
         command_type: int = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

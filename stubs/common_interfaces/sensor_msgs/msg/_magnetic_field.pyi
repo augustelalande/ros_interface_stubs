@@ -12,6 +12,7 @@ class MagneticField:
         header: std_msgs.msg.Header = ...,
         magnetic_field: geometry_msgs.msg.Vector3 = ...,
         magnetic_field_covariance: list[float] = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...

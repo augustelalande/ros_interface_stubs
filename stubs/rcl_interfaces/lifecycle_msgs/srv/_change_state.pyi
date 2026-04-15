@@ -16,6 +16,7 @@ class ChangeState_Request:
         self,
         *,
         transition: lifecycle_msgs.msg.Transition = ...,
+        check_fields: bool = ...,
     ) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...
@@ -26,11 +27,7 @@ class ChangeState_Request:
     def transition(self, value: lifecycle_msgs.msg.Transition) -> None: ...
 
 class ChangeState_Response:
-    def __init__(
-        self,
-        *,
-        success: bool = ...,
-    ) -> None: ...
+    def __init__(self, *, success: bool = ..., check_fields: bool = ...) -> None: ...
     @classmethod
     def get_fields_and_field_types(cls) -> dict[str, str]: ...
     # Members
