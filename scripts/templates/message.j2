@@ -10,7 +10,7 @@
 
 class {{ name }}:
     {% if constants %}# Constants{% endif %}
-    {% for field, type_value in constants.items() %}{{ field }}: {{ type_value[0]|safe }} = {{ type_value[1] }}
+    {% for field, type_value in constants.items() %}{{ field }}: {{ type_value[0]|safe }} = {{ type_value[1]|safe }}
     {% endfor %}
 
     def __init__(

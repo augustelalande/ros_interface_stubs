@@ -19,7 +19,7 @@ import unique_identifier_msgs.msg
 class {{ name }}_Goal:
     {% if goal_constants %}# Constants{% endif %}
     {% for field, type_value in goal_constants.items() %}
-    {{ field }}: {{ type_value[0]|safe }} = {{ type_value[1] }}
+    {{ field }}: {{ type_value[0]|safe }} = {{ type_value[1]|safe }}
     {% endfor %}
 
     def __init__(
@@ -42,7 +42,7 @@ class {{ name }}_Goal:
 class {{ name }}_Result:
     {% if result_constants %}# Constants{% endif %}
     {% for field, type_value in result_constants.items() %}
-    {{ field }}: {{ type_value[0]|safe }} = {{ type_value[1] }}
+    {{ field }}: {{ type_value[0]|safe }} = {{ type_value[1]|safe }}
     {% endfor %}
 
     def __init__(
@@ -65,7 +65,7 @@ class {{ name }}_Result:
 class {{ name }}_Feedback:
     {% if feedback_constants %}# Constants{% endif %}
     {% for field, type_value in feedback_constants.items() %}
-    {{ field }}: {{ type_value[0]|safe }} = {{ type_value[1] }}
+    {{ field }}: {{ type_value[0]|safe }} = {{ type_value[1]|safe }}
     {% endfor %}
 
     def __init__(

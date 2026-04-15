@@ -17,7 +17,7 @@ else:
 class {{ name }}_Request:
     {% if request_constants %}# Constants{% endif %}
     {% for field, type_value in request_constants.items() %}
-    {{ field }}: {{ type_value[0]|safe }} = {{ type_value[1] }}
+    {{ field }}: {{ type_value[0]|safe }} = {{ type_value[1]|safe }}
     {% endfor %}
 
     def __init__(
@@ -40,7 +40,7 @@ class {{ name }}_Request:
 class {{ name }}_Response:
     {% if response_constants %}# Constants{% endif %}
     {% for field, type_value in response_constants.items() %}
-    {{ field }}: {{ type_value[0]|safe }} = {{ type_value[1] }}
+    {{ field }}: {{ type_value[0]|safe }} = {{ type_value[1]|safe }}
     {% endfor %}
 
     def __init__(
