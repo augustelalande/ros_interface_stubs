@@ -6,7 +6,7 @@ from ._bool import Bool
 from ._byte import Byte
 from ._byte_multi_array import ByteMultiArray
 from ._char import Char
-from ._color_r_g_b_a import ColorRGBA
+from ._color_rgba import ColorRGBA
 from ._empty import Empty
 from ._float32 import Float32
 from ._float32_multi_array import Float32MultiArray

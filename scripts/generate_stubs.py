@@ -36,7 +36,11 @@ ROS_TO_PYTHON = {
 
 
 def title_to_snake(name: str) -> str:
-    return re.sub(r"(?<!^)(?=[A-Z]+)", "_", name).lower()
+    # Insert underscore between an acronym and the following word: UVCoordinate → UV_Coordinate
+    name = re.sub(r"([A-Z]+)([A-Z][a-z])", r"\1_\2", name)
+    # Insert underscore between a lowercase/digit and the next uppercase: myWord → my_Word
+    name = re.sub(r"([a-z\d])([A-Z])", r"\1_\2", name)
+    return name.lower()
 
 
 def generate_message_file(

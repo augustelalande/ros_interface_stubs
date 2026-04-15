@@ -13,7 +13,7 @@ from ._marker import Marker
 from ._marker_array import MarkerArray
 from ._menu_entry import MenuEntry
 from ._mesh_file import MeshFile
-from ._u_v_coordinate import UVCoordinate
+from ._uv_coordinate import UVCoordinate
 
 __all__ = [
     "ImageMarker",

@@ -4,11 +4,11 @@
 
 from ._admittance_controller_state import AdmittanceControllerState
 from ._battery_state_array import BatteryStateArray
-from ._c_a_nopen_state import CANopenState
+from ._ca_nopen_state import CANopenState
 from ._dynamic_interface_group_values import DynamicInterfaceGroupValues
 from ._dynamic_interface_values import DynamicInterfaceValues
 from ._dynamic_joint_state import DynamicJointState
-from ._ether_c_a_t_state import EtherCATState
+from ._ether_cat_state import EtherCATState
 from ._float64_values import Float64Values
 from ._generic_hardware_state import GenericHardwareState
 from ._gripper_command import GripperCommand
@@ -29,16 +29,16 @@ from ._mecanum_drive_controller_state import MecanumDriveControllerState
 from ._motion_argument import MotionArgument
 from ._motion_primitive import MotionPrimitive
 from ._motion_primitive_sequence import MotionPrimitiveSequence
-from ._multi_d_o_f_command import MultiDOFCommand
-from ._multi_d_o_f_state_stamped import MultiDOFStateStamped
+from ._multi_dof_command import MultiDOFCommand
+from ._multi_dof_state_stamped import MultiDOFStateStamped
 from ._pid_state import PidState
-from ._single_d_o_f_state import SingleDOFState
-from ._single_d_o_f_state_stamped import SingleDOFStateStamped
+from ._single_dof_state import SingleDOFState
+from ._single_dof_state_stamped import SingleDOFStateStamped
 from ._speed_scaling_factor import SpeedScalingFactor
 from ._steering_controller_command import SteeringControllerCommand
 from ._steering_controller_status import SteeringControllerStatus
-from ._v_d_a5050_safety_state import VDA5050SafetyState
-from ._v_d_a5050_state import VDA5050State
+from ._vda5050_safety_state import VDA5050SafetyState
+from ._vda5050_state import VDA5050State
 from ._wrench_framed import WrenchFramed
 
 __all__ = [

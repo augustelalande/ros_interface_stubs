@@ -4,8 +4,8 @@
 
 from ._joint_trajectory import JointTrajectory
 from ._joint_trajectory_point import JointTrajectoryPoint
-from ._multi_d_o_f_joint_trajectory import MultiDOFJointTrajectory
-from ._multi_d_o_f_joint_trajectory_point import MultiDOFJointTrajectoryPoint
+from ._multi_dof_joint_trajectory import MultiDOFJointTrajectory
+from ._multi_dof_joint_trajectory_point import MultiDOFJointTrajectoryPoint
 
 __all__ = [
     "JointTrajectory",

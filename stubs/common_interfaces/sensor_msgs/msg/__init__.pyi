@@ -17,7 +17,7 @@ from ._joy_feedback_array import JoyFeedbackArray
 from ._laser_echo import LaserEcho
 from ._laser_scan import LaserScan
 from ._magnetic_field import MagneticField
-from ._multi_d_o_f_joint_state import MultiDOFJointState
+from ._multi_dof_joint_state import MultiDOFJointState
 from ._multi_echo_laser_scan import MultiEchoLaserScan
 from ._nav_sat_fix import NavSatFix
 from ._nav_sat_status import NavSatStatus
