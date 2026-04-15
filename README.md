@@ -16,28 +16,35 @@ This project generates `.pyi` stub files from the raw `.msg`, `.srv`, and `.acti
 
 ## Usage
 
-Copy or install the `stubs/` directory and point your type checker at it.
+Copy the package directories you need from `stubs/` into your project.
+
+```
+your_project/
+  stubs/
+    common_interfaces/     # copied from this repo
+      geometry_msgs/
+      std_msgs/
+      ...
+  src/
+    your_ros_node.py
+```
+
+Then tell your type checker where to find them.
 
 ### Pyright
 
-Add the stub paths to `pyrightconfig.json` or `pyproject.toml`:
-
 ```toml
+# pyproject.toml
 [tool.pyright]
-extraPaths = [
-    "stubs/common_interfaces",
-    "stubs/rcl_interfaces",
-    "stubs/unique_identifier_msgs",
-]
+extraPaths = ["stubs/common_interfaces"]
 ```
 
 ### mypy
 
-Add the stub paths via `MYPYPATH` or `mypy.ini`:
-
 ```ini
+# mypy.ini
 [mypy]
-mypy_path = stubs/common_interfaces:stubs/rcl_interfaces:stubs/unique_identifier_msgs
+mypy_path = stubs/common_interfaces
 ```
 
 ## Regenerating stubs
