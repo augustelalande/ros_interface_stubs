@@ -11,7 +11,9 @@ This project generates `.pyi` stub files from the raw `.msg`, `.srv`, and `.acti
 | Package group | Packages |
 |---|---|
 | `common_interfaces` | `diagnostic_msgs`, `geometry_msgs`, `nav_msgs`, `sensor_msgs`, `shape_msgs`, `std_msgs`, `std_srvs`, `stereo_msgs`, `trajectory_msgs`, `visualization_msgs` |
-| `rcl_interfaces` | `action_msgs`, `builtin_interfaces`, `composition_interfaces`, `lifecycle_msgs`, `rcl_interfaces`, `rosgraph_msgs`, `statistics_msgs`, `type_description_interfaces` |
+| `control_msgs` | `control_msgs` |
+| `navigation_msgs` | `map_msgs` |
+| `rcl_interfaces` | `action_msgs`, `builtin_interfaces`, `composition_interfaces`, `lifecycle_msgs`, `rcl_interfaces`, `rosgraph_msgs`, `service_msgs`, `statistics_msgs`, `test_msgs`, `type_description_interfaces` |
 | `unique_identifier_msgs` | `unique_identifier_msgs` |
 
 ## Usage
