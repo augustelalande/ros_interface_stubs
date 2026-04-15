@@ -10,3 +10,6 @@
 [submodule "interfaces/control_msgs"]
 	path = interfaces/control_msgs
 	url = https://github.com/ros-controls/control_msgs
+[submodule "interfaces/navigation_msgs"]
+	path = interfaces/navigation_msgs
+	url = https://github.com/ros-planning/navigation_msgs
